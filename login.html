@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="ftagencyeblanco.png" alt="Logo de la página">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="header.html" class="profile-icon">
+                <img src="profile_picture_user_icon_153847.webp" alt="Perfil">
+                <span id="profileText">Iniciar sesión</span>
+            </a>
+            <a href="#" class="contact-button">Contáctenos</a>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <form id="loginForm" onsubmit="return validateLogin(event);">
+            <div>
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </section>
+
+    <section class="derechos-section">
+        <div class="iconos">
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="facebook_logo_icon_147291.png" alt="Icono 1" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="1491580635-yumminkysocialmedia26_83102.png" alt="Icono 2" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="tiktok_logo_icon_186896.png" alt="Icono 3" class="icono">
+            </a>
+        </div>
+        <p class="correo-texto">contacto@ftagency.com</p>
+        <div class="logo-masterclass">
+            <img src="ftagencyeblanco.png" alt="Logo Masterclass">
+        </div>
+        <p class="copyright-texto">Copyright © FTAGENCY</p>
+    </section>
+
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Cambiar las credenciales a "admin" y "admin123"
+            if (username === "admin" && password === "admin123") {
+                localStorage.setItem('isLoggedIn', 'true'); // Guardar el estado de sesión
+                window.location.href = 'admin.html'; // Redirigir a la página del administrador
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inscripción</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de vincular tu archivo CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 60px; /* Ajusta la altura del logo según sea necesario */
+        }
+
+        nav .navigation ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav .navigation li {
+            margin-right: 20px;
+        }
+
+        nav .navigation a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav .navigation a:hover {
+            color: #0056b3;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #28a745; /* Color verde para el título */
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px; /* Ajuste del padding para el botón */
+            background: linear-gradient(90deg, #007BFF, #0056b3); /* Degradado de color */
+            color: white;
+            border: none;
+            border-radius: 30px; /* Borde redondeado */
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold; /* Fuente más gruesa */
+            transition: background-color 0.3s, transform 0.2s; /* Transiciones para hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #0056b3, #007BFF); /* Inversión del degradado en hover */
+            transform: translateY(-2px); /* Efecto de elevación */
+        }
+
+        .derechos-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .iconos {
+            margin-bottom: 10px;
+        }
+
+        .icono {
+            width: 30px; /* Ajusta el tamaño de los iconos */
+            height: auto;
+            margin: 0 10px;
+        }
+
+        .correo-texto {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .copyright-texto {
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="ftagencyeblanco.png" alt="Logo de la página">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Inscripción Completada</h1>
+        <p>Gracias por inscribirte. Aquí tienes más información.</p>
+        <video width="600" controls>
+            <source src="tu_video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <br>
+        <button onclick="window.location.href='perfil.html';">Ir al Perfil</button>
+    </main>
+
+    <section class="derechos-section">
+        <div class="iconos">
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="facebook_logo_icon_147291.png" alt="Icono 1" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="1491580635-yumminkysocialmedia26_83102.png" alt="Icono 2" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="tiktok_logo_icon_186896.png" alt="Icono 3" class="icono">
+            </a>
+        </div>
+        <p class="correo-texto">contacto@ftagency.com</p>
+        <div class="logo-masterclass">
+            <img src="ftagencyeblanco.png" alt="Logo Masterclass">
+        </div>
+        <p class="copyright-texto">Copyright © FTAGENCY</p>
+    </section>
+</body>
+</html>

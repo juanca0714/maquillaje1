@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Simula el estado de sesión
+        let isLoggedIn = false;
+
+        function toggleLogin() {
+            const profileText = document.getElementById('profileText');
+
+            if (!isLoggedIn) {
+                // Redirige a la página de inicio de sesión
+                window.location.href = 'login.html';
+            } else {
+                // Cierra sesión y actualiza el texto
+                isLoggedIn = false;
+                profileText.textContent = 'Iniciar sesión'; // Cambia el texto a "Iniciar sesión"
+                alert('Has cerrado sesión.'); // Mensaje de cierre de sesión
+                // Aquí puedes agregar la lógica para redirigir al usuario a la página de inicio
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header principal -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="ftagencyeblanco.png" alt="Logo de la página">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" class="profile-icon" id="profileLink" onclick="toggleLogin()">
+                <img src="profile_picture_user_icon_153847.webp" alt="Perfil">
+                <span id="profileText">Iniciar sesión</span> <!-- Aquí se mostrará el texto -->
+            </a>
+            <a href="#" class="contact-button">Contáctenos</a>
+        </div>
+    </header>
+
+    <section class="clases-section">
+        <h1 class="titulo-clases">Clases</h1>
+    </section>
+
+    <section class="clases-list-section">
+        <h2 class="titulo-clases">Nuestras Clases</h2>
+        <div class="clases-list">
+            <div class="clase-item">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Clase 1" class="clase-imagen">
+                <h3 class="clase-nombre">Nombre de la Clase 1</h3>
+                <a href="inscripcion.html" class="inscribirse-boton">Inscribirse</a>
+            </div>
+            <div class="clase-item">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Clase 2" class="clase-imagen">
+                <h3 class="clase-nombre">Nombre de la Clase 2</h3>
+                <a href="inscripcion.html" class="inscribirse-boton">Inscribirse</a>
+            </div>
+            <div class="clase-item">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Clase 3" class="clase-imagen">
+                <h3 class="clase-nombre">Nombre de la Clase 3</h3>
+                <a href="inscripcion.html" class="inscribirse-boton">Inscribirse</a>
+            </div>
+            <div class="clase-item">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Clase 4" class="clase-imagen">
+                <h3 class="clase-nombre">Nombre de la Clase 4</h3>
+                <a href="inscripcion.html" class="inscribirse-boton">Inscribirse</a>
+            </div>
+            <div class="clase-item">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Clase 5" class="clase-imagen">
+                <h3 class="clase-nombre">Nombre de la Clase 5</h3>
+                <a href="inscripcion.html" class="inscribirse-boton">Inscribirse</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="derechos-section">
+        <div class="iconos">
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="facebook_logo_icon_147291.png" alt="Icono 1" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="1491580635-yumminkysocialmedia26_83102.png" alt="Icono 2" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="tiktok_logo_icon_186896.png" alt="Icono 3" class="icono">
+            </a>
+        </div>
+        <p class="correo-texto">contacto@ftagency.com</p>
+        <div class="logo-masterclass">
+            <img src="ftagencyeblanco.png" alt="Logo Masterclass">
+        </div>
+        <p class="copyright-texto">Copyright © FTAGENCY</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Class</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el menú desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header principal -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="ftagencyeblanco.png" alt="Logo de la página">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <div class="header-icons">
+                <div class="dropdown">
+                    <a href="#" class="profile-icon" id="profileLink">
+                        <img src="profile_picture_user_icon_153847.webp" alt="Perfil" style="width: 30px; height: 30px;">
+                    </a>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="#" id="loginOption" onclick="toggleLogin()">Iniciar sesión</a>
+                        <a href="#" id="logoutOption" style="display:none;" onclick="logout()">Cerrar sesión</a>
+                        <a href="perfil.html" id="profileOption" style="display:none;">Perfil</a>
+                    </div>
+                </div>
+                <a href="#" class="contact-button">Contáctenos</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Master Class -->
+    <section class="masterclass-section">
+        <div class="masterclass-grid">
+            <div class="small-images">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Estudiante tomando notas" class="small-image">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Estudiante tomando notas" class="small-image">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Estudiante escribiendo" class="small-image">
+            </div>
+            <div class="text-section">
+                <h1>DESCUBRE TU POTENCIAL: <span class="highlight">MASTER CLASS</span> DE FRANK TREJOS</h1>
+                <p>Explora el mundo del conocimiento con las Master Classes de Frank Trejos. Con un enfoque práctico y dinámico, estas clases están diseñadas para ayudarte a descubrir y desarrollar tu potencial. Aprende de manera efectiva y diviértete en el proceso. ¡Únete a nuestra comunidad de aprendices!</p>
+            </div>
+            <div class="large-image">
+                <img src="Facetune_30-03-2024-18-42-16.JPG" alt="Estudiante tomando notas" class="main-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva Sección con imagen a la derecha y botón -->
+    <section class="enroll-section">
+        <div class="text-section1">
+            <h1>INSCRÍBETE ¡AQUÍ!</h1>
+            <button class="contact-button1">INSCRÍBETE</button>
+        </div>
+        <div class="image1-container">
+            <img src="Facetune_30-03-2024-18-42-16.JPG" alt="incite" class="image1">
+        </div>
+    </section>
+
+    <section class="derechos-section">
+        <div class="iconos">
+            <a href="https://www.instagram.com/franktrejoss/">
+                 <img src="facebook_logo_icon_147291.png" alt="Icono 1" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="1491580635-yumminkysocialmedia26_83102.png" alt="Icono 2" class="icono">
+            </a>
+            <a href="https://www.instagram.com/franktrejoss/">
+                <img src="tiktok_logo_icon_186896.png" alt="Icono 3" class="icono">
+            </a>
+        </div>
+        <p class="correo-texto">contacto@ftagency.com</p>
+        <div class="logo-masterclass">
+            <img src="ftagencyeblanco.png" alt="Logo Masterclass">
+        </div>
+        <p class="copyright-texto">Copyright © FTAGENCY</p>
+    </section>
+
+    <script>
+        function toggleLogin() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const userRole = localStorage.getItem('userRole');
+
+            if (isLoggedIn === 'true') {
+                if (userRole === 'admin') {
+                    window.location.href = 'admin.html';
+                } else {
+                    window.location.href = 'perfil.html';
+                }
+            } else {
+                window.location.href = 'login.html';
+            }
+        }
+
+        function logout() {
+            localStorage.setItem('isLoggedIn', 'false');
+            localStorage.removeItem('userRole');
+            updateProfileOptions();
+            window.location.reload(); // Recargar la página después de cerrar sesión
+        }
+
+        function updateProfileOptions() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const loginOption = document.getElementById('loginOption');
+            const logoutOption = document.getElementById('logoutOption');
+            const profileOption = document.getElementById('profileOption');
+
+            if (isLoggedIn === 'true') {
+                loginOption.style.display = 'none';
+                logoutOption.style.display = 'block';
+                profileOption.style.display = 'block';
+            } else {
+                loginOption.style.display = 'block';
+                logoutOption.style.display = 'none';
+                profileOption.style.display = 'none';
+            }
+        }
+
+        // Actualiza las opciones del perfil al cargar la página
+        window.onload = function() {
+            updateProfileOptions();
+        };
+    </script>
+</body>
+</html>

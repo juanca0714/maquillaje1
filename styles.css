@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Cambiar a Montserrat para un estilo más juvenil */
+    background-color: #f0f0f0; /* Color de fondo general */
+}
+
+.main-header {
+    background-color: #fc7edd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.logo img {
+    max-height: 70px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-icons img {
+    max-height: 10px;
+}
+
+.contact-button {
+    background-color: #590243;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Cambiar la fuente del botón a Poppins */
+    font-weight: 500; /* Peso medio para un mejor estilo */
+}
+
+.contact-button:hover {
+    background-color: #333;
+}
+
+/* Sección Master Class */
+.masterclass-section {
+    padding: 40px;
+    background-color: #111;
+    margin: 0;
+}
+
+.masterclass-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: auto auto; /* Filas automáticas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Imágenes pequeñas estilo cuadrícula */
+.small-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
+}
+
+.small-images img {
+    width: 100%; /* Ancho por defecto de las imágenes */
+    height: 100%; /* Alto por defecto de las imágenes */
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados por defecto */
+}
+
+/* Estilos específicos para la segunda imagen */
+.small-images img:nth-child(2) {
+    width: 200px; /* Ajusta el ancho de la segunda imagen */
+    height: 310px; /* Ajusta el alto de la segunda imagen */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.text-section {
+    grid-column: 2 / span 1; /* Alinea el texto en la segunda columna */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h1 {
+    font-family: 'Poppins', sans-serif; /* Cambiar la fuente del título a Poppins */
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.text-section .highlight {
+    color: #e362c3;
+}
+
+.text-section p {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+/* Imagen grande debajo del texto */
+.large-image {
+    display: flex;
+    grid-column: 1 / span 2; /* Abarca ambas columnas */
+    margin: 0; /* Asegúrate de que no haya márgenes */ 
+}
+
+.large-image img {
+    display: block;           /* Cambia a block para evitar espacios */
+    width: 100%;             /* Ajusta al ancho completo */
+    max-height: 30vh;       /* O ajusta a un tamaño específico */
+    object-fit: cover;       /* Ajusta la imagen sin deformarla */
+    margin: 0;               /* Elimina márgenes */
+    padding: 0;              /* Elimina rellenos */
+}
+
+.image-container {
+    margin: 0; /* Elimina el margen de contenedores de imágenes */
+}
+
+.image-container img {
+    width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Cambia a block para eliminar espacio debajo de la imagen */
+}
+
+/* Sección de Inscripción */
+.enroll-section {
+    display: flex;
+    justify-content: center; /* Mantiene el texto a la izquierda y la imagen a la derecha */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 10px;
+    background-color: #000000; /* Fondo oscuro */
+    position: relative;
+}
+
+.text-section1 {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    margin-right: 0%; /* Mueve el texto un 10% más a la izquierda */
+}
+
+.contact-button1 {
+    background-color: #e362c3;
+    color: #fff;
+    padding: 10px 15px; /* Reduce el padding horizontal */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente del botón a Poppins */
+    font-weight: 500; /* Peso medio para el botón */
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+    border-radius: 5px; /* Añade un poco de redondeo */
+    margin-top: 50px; /* Mantiene la separación entre el texto y el botón */
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    width: 20%;
+}
+
+.contact-button1:hover {
+    background-color: #54014e;
+}
+
+.image1-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1 {
+    width: 250px; /* Tamaño de la imagen */
+    height: auto;
+    margin-left: 0;
+}
+
+/*Seccion de derechos*/
+.derechos-section {
+    text-align: center; /* Centra el contenido de la sección */
+    padding: 40px;
+    background-color: #000000; /* Fondo claro para la sección */
+}
+
+.iconos {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 20px; /* Espaciado entre los íconos */
+    margin-bottom: 20px; /* Espacio debajo de los íconos */
+}
+
+.icono {
+    width: 50px; /* Ajusta el tamaño de los íconos */
+    height: auto; /* Mantiene la proporción de los íconos */
+}
+
+.correo-texto {
+    font-size: 18px; /* Tamaño de texto para el correo */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+.logo-masterclass img {
+    width: 100px; /* Ajusta el tamaño del logo de la masterclass */
+    height: auto; /* Mantiene la proporción del logo */
+    margin: 20px 0; /* Espacio alrededor del logo */
+}
+
+.copyright-texto {
+    font-size: 16px; /* Tamaño de texto para derechos de autor */
+    color: #ffffff; /* Color más suave para el texto */
+    margin-top: 10px; /* Margen superior */
+}
+
+.clases-section {
+    background-image: url('Facetune_30-03-2024-18-42-16.JPG'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Cubre toda la sección */
+    background-position: 50% 0; /* Centra horizontalmente y alinea al top */
+    height: 70px; /* Altura igual a la del header, ajusta según el tamaño del header */
+    width: 100%; /* Ocupar todo el ancho */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: rgb(255, 255, 255); /* Color del texto */
+    text-align: center; /* Centra el texto */
+}
+
+.titulo-clases {
+    font-size: 48px; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+}
+
+.clases-list-section {
+    padding: 40px;
+    background-color: #3c0148; /* Fondo claro */
+    text-align: center; /* Centra el título */
+}
+
+.titulo-clases {
+    font-size: 36px;
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.clases-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.clase-item {
+    background-color: #e362c3; /* Fondo blanco para cada clase */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    color: #fff; /* Color del texto */
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.clase-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación en hover */
+}
+
+.clase-titulo {
+    font-size: 20px; /* Tamaño del título de la clase */
+    font-weight: bold; /* Negrita */
+}
+
+.clase-imagen {
+    width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Mantiene la proporción, recortando si es necesario */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
